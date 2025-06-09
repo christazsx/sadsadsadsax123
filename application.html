@@ -1,88 +1,129 @@
 <!DOCTYPE html>
-<html lang="en" class="h-full bg-gray-100">
+<html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Contact Form Centered</title>
-  <script src="https://cdn.tailwindcss.com"></script>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Hiring Application Form</title>
+<script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body class="flex flex-col h-full min-h-screen">
+<body class="bg-gray-100 flex flex-col min-h-screen">
 
-  <!-- Header -->
-  <header class="bg-purple-600 text-white p-4 shadow-md">
-    <div class="container mx-auto">
-      <h1 class="text-xl font-bold">Application Form</h1>
-    </div>
+  <!-- HEADER -->
+  <header class="bg-purple-600 text-white p-6 text-center text-2xl font-bold">
+    Job Application Form
   </header>
 
-  <!-- Main: form centered -->
-  <main class="flex-grow flex items-center justify-center p-4">
-    <div class="w-full max-w-xl">
-      <form id="contactForm" class="bg-white p-8 rounded-2xl shadow-lg">
-        <h3 class="text-2xl font-bold text-gray-800 mb-6">Send Us a Message</h3>
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
-          <div>
-            <label for="name" class="block text-sm font-medium text-gray-700 mb-2">Your Name</label>
-            <input
-              type="text"
-              id="name"
-              class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent outline-none transition"
-              placeholder="John Doe"
-            />
-          </div>
-          <div>
-            <label for="email" class="block text-sm font-medium text-gray-700 mb-2">Your Email</label>
-            <input
-              type="email"
-              id="email"
-              class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent outline-none transition"
-              placeholder="john@example.com"
-            />
-          </div>
-        </div>
-        <div class="mb-6">
-          <label for="subject" class="block text-sm font-medium text-gray-700 mb-2">Subject</label>
-          <input
-            type="text"
-            id="subject"
-            class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent outline-none transition"
-            placeholder="How can we help you?"
-          />
-        </div>
-        <div class="mb-6">
-          <label for="message" class="block text-sm font-medium text-gray-700 mb-2">Message</label>
-          <textarea
-            id="message"
-            rows="5"
-            class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent outline-none transition"
-            placeholder="Your message here..."
-          ></textarea>
-        </div>
-        <div class="mb-6">
-          <label class="inline-flex items-center">
-            <input type="checkbox" class="rounded text-purple-600 focus:ring-purple-500" />
-            <span class="ml-2 text-sm text-gray-600">I agree to the privacy policy and terms of service</span>
-          </label>
-        </div>
-        <button
-          type="submit"
-          class="w-full bg-purple-600 text-white font-semibold py-3 rounded-lg shadow-md hover:bg-purple-700 transition duration-300"
-        >
-          Send Message
-        </button>
-        <p class="text-center text-sm text-gray-500 mt-4">
-          This is a form. This would send your message to our team.
-        </p>
-      </form>
-    </div>
+  <!-- MAIN (form centered) -->
+  <main class="flex-grow flex items-center justify-center p-6">
+    <form id="contactForm" class="bg-white p-8 rounded-2xl shadow-lg w-full max-w-lg">
+
+      <h3 class="text-2xl font-bold text-gray-800 mb-6">Apply for a Position</h3>
+
+      <div class="mb-6">
+        <label for="name" class="block text-sm font-medium text-gray-700 mb-2">Your Name</label>
+        <input type="text" id="name" name="name" required
+          class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent outline-none transition"
+          placeholder="John Doe" />
+      </div>
+
+      <div class="mb-6">
+        <label for="discordUser" class="block text-sm font-medium text-gray-700 mb-2">Discord Username</label>
+        <input type="text" id="discordUser" name="discordUser" required
+          class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent outline-none transition"
+          placeholder="JohnDoe#1234" />
+      </div>
+
+      <div class="mb-6">
+        <label for="role" class="block text-sm font-medium text-gray-700 mb-2">Position Applying For</label>
+        <select id="role" name="role" required
+          class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent outline-none transition">
+          <option value="" disabled selected>Select a role</option>
+          <option value="Game Developer">Builder</option>
+          <option value="Community Manager">VFX Artist</option>
+          <option value="Graphic Designer">GUI Designer</option>
+          <option value="Moderator">Animator</option>
+          <option value="Graphic Designer">SFX Designer</option>
+          <!-- Add more roles here -->
+        </select>
+      </div>
+
+      <div class="mb-6">
+        <label for="message" class="block text-sm font-medium text-gray-700 mb-2">Message</label>
+        <textarea id="message" name="message" rows="5" required
+          class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent outline-none transition"
+          placeholder="Tell us why you're the right fit..."></textarea>
+      </div>
+
+      <button type="submit"
+        class="w-full bg-purple-600 text-white font-semibold py-3 rounded-lg shadow-md hover:bg-purple-700 transition duration-300">
+        Submit Application
+      </button>
+
+      <p id="statusMessage" class="text-center text-sm text-gray-500 mt-4"></p>
+    </form>
   </main>
 
-  <!-- Footer -->
-  <footer class="bg-gray-800 text-gray-300 p-4 mt-auto shadow-inner">
-    <div class="container mx-auto text-center text-sm">
-      &copy; 2025 CsmGames. All rights reserved.
-    </div>
+  <!-- FOOTER -->
+  <footer class="bg-gray-200 text-center p-4 text-gray-600 text-sm">
+    &copy; 2025 Your Company. All rights reserved.
   </footer>
+
+  <script>
+    const webhookURL = 'https://discord.com/api/webhooks/1381559777334657055/GXvDr7t8gws05Q4DmbZM8WWg8RMQUaY5rYue93xBOVN-_4Xp2PNzLvjj3LIhllvZr8DE';
+
+    document.getElementById('contactForm').addEventListener('submit', async function (e) {
+      e.preventDefault();
+
+      const statusMessage = document.getElementById('statusMessage');
+      statusMessage.textContent = 'Sending...';
+
+      const name = this.name.value.trim();
+      const discordUser = this.discordUser.value.trim();
+      const role = this.role.value;
+      const message = this.message.value.trim();
+
+      if (!role) {
+        statusMessage.textContent = 'Please select a position.';
+        return;
+      }
+
+      // Format the Discord webhook message
+      const discordPayload = {
+        content: null,
+        embeds: [
+          {
+            title: "New Job Application",
+            color: 0x6b46c1, // Purple color
+            fields: [
+              { name: "Name", value: name || "N/A", inline: true },
+              { name: "Discord Username", value: discordUser || "N/A", inline: true },
+              { name: "Position Applied For", value: role || "N/A", inline: false },
+              { name: "Message", value: message || "N/A", inline: false },
+            ],
+            timestamp: new Date().toISOString(),
+          },
+        ],
+      };
+
+      try {
+        const res = await fetch(webhookURL, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(discordPayload),
+        });
+
+        if (res.ok) {
+          statusMessage.textContent = 'Application submitted successfully! Thank you.';
+          this.reset();
+        } else {
+          statusMessage.textContent = 'Failed to send application. Please try again later.';
+        }
+      } catch (error) {
+        statusMessage.textContent = 'Error sending application. Please try again later.';
+        console.error(error);
+      }
+    });
+  </script>
 
 </body>
 </html>
