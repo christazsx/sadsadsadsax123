@@ -1,0 +1,756 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CsmGames - Gaming Excellence</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            scroll-behavior: smooth;
+        }
+        .hero-gradient {
+            background: linear-gradient(135deg, #4a148c 0%, #7b1fa2 100%);
+        }
+        .game-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.2), 0 10px 10px -5px rgba(0, 0, 0, 0.1);
+        }
+        .nav-link {
+            position: relative;
+        }
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -4px;
+            left: 0;
+            background-color: #9c27b0;
+            transition: width 0.3s ease;
+        }
+        .nav-link:hover::after {
+            width: 100%;
+        }
+        .active::after {
+            width: 100%;
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <!-- Navigation -->
+    <nav class="fixed w-full bg-white shadow-md z-50">
+        <div class="container mx-auto px-6 py-3 flex justify-between items-center">
+            <div class="flex items-center">
+                <div class="text-3xl font-bold text-purple-800">
+                    <span class="text-purple-600">Csm</span>Games
+                </div>
+            </div>
+            <div class="hidden md:flex space-x-10">
+                <a href="#games" class="nav-link text-gray-700 hover:text-purple-600 transition duration-300">Our Games</a>
+                <a href="#brands" class="nav-link text-gray-700 hover:text-purple-600 transition duration-300">For Brands</a>
+                <a href="#careers" class="nav-link text-gray-700 hover:text-purple-600 transition duration-300">Careers</a>
+                <a href="#about" class="nav-link text-gray-700 hover:text-purple-600 transition duration-300">About Us</a>
+                <a href="#contact" class="nav-link text-gray-700 hover:text-purple-600 transition duration-300">Contact Us</a>
+            </div>
+            <div class="md:hidden">
+                <button id="mobile-menu-button" class="text-gray-700 hover:text-purple-600 focus:outline-none">
+                    <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white shadow-md">
+            <div class="px-4 py-3 space-y-3">
+                <a href="#games" class="block text-gray-700 hover:text-purple-600 transition duration-300">Our Games</a>
+                <a href="#brands" class="block text-gray-700 hover:text-purple-600 transition duration-300">For Brands</a>
+                <a href="#careers" class="block text-gray-700 hover:text-purple-600 transition duration-300">Careers</a>
+                <a href="#about" class="block text-gray-700 hover:text-purple-600 transition duration-300">About Us</a>
+                <a href="#contact" class="block text-gray-700 hover:text-purple-600 transition duration-300">Contact Us</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="hero-gradient pt-32 pb-20 px-6">
+        <div class="container mx-auto text-center">
+            <h1 class="text-4xl md:text-6xl font-bold text-white mb-6">Redefining Gaming Excellence</h1>
+            <p class="text-xl text-purple-100 mb-10 max-w-3xl mx-auto">We acquire premium games, collaborate with industry giants, and build exceptional gaming experiences.</p>
+            <div class="flex flex-wrap justify-center gap-4">
+                <a href="#games" class="bg-white text-purple-800 font-semibold px-8 py-3 rounded-full shadow-lg hover:bg-purple-50 transition duration-300">Explore Our Games</a>
+                <a href="#contact" class="bg-transparent border-2 border-white text-white font-semibold px-8 py-3 rounded-full hover:bg-white hover:text-purple-800 transition duration-300">Get In Touch</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Our Games Section -->
+    <section id="games" class="py-20 px-6 bg-white">
+        <div class="container mx-auto">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold text-gray-800 mb-4">Our Premium Games</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">We acquire and develop exceptional gaming experiences that push the boundaries of entertainment.</p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+                <!-- Game 1 -->
+                <div class="game-card bg-white rounded-xl shadow-lg overflow-hidden transition duration-500">
+                    <div class="h-48 bg-purple-900 relative overflow-hidden">
+                        <svg class="absolute inset-0 w-full h-full" viewBox="0 0 100 100" preserveAspectRatio="none">
+                            <path fill="#4a148c" d="M0,0 L100,0 L100,80 C75,100 50,90 0,100 Z"></path>
+                        </svg>
+                        <div class="absolute inset-0 flex items-center justify-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-20 w-20 text-white opacity-80" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z" />
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-2xl font-bold text-gray-800 mb-2">Cosmic Odyssey</h3>
+                        <p class="text-gray-600 mb-4">An epic space adventure with stunning visuals and immersive gameplay.</p>
+                        <div class="flex items-center justify-between">
+                            <span class="bg-purple-100 text-purple-800 text-sm font-medium px-3 py-1 rounded-full">Adventure</span>
+                            <button class="text-purple-600 hover:text-purple-800 font-medium">Learn More →</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Game 2 -->
+                <div class="game-card bg-white rounded-xl shadow-lg overflow-hidden transition duration-500">
+                    <div class="h-48 bg-indigo-800 relative overflow-hidden">
+                        <svg class="absolute inset-0 w-full h-full" viewBox="0 0 100 100" preserveAspectRatio="none">
+                            <path fill="#3949ab" d="M0,0 L100,0 L100,80 C75,100 50,90 0,100 Z"></path>
+                        </svg>
+                        <div class="absolute inset-0 flex items-center justify-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-20 w-20 text-white opacity-80" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M17.657 18.657A8 8 0 016.343 7.343S7 9 9 10c0-2 .5-5 2.986-7C14 5 16.09 5.777 17.656 7.343A7.975 7.975 0 0120 13a7.975 7.975 0 01-2.343 5.657z" />
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9.879 16.121A3 3 0 1012.015 11L11 14H9c0 .768.293 1.536.879 2.121z" />
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-2xl font-bold text-gray-800 mb-2">Shadow Realm</h3>
+                        <p class="text-gray-600 mb-4">A dark fantasy RPG with strategic combat and a rich storyline.</p>
+                        <div class="flex items-center justify-between">
+                            <span class="bg-indigo-100 text-indigo-800 text-sm font-medium px-3 py-1 rounded-full">RPG</span>
+                            <button class="text-indigo-600 hover:text-indigo-800 font-medium">Learn More →</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Game 3 -->
+                <div class="game-card bg-white rounded-xl shadow-lg overflow-hidden transition duration-500">
+                    <div class="h-48 bg-pink-700 relative overflow-hidden">
+                        <svg class="absolute inset-0 w-full h-full" viewBox="0 0 100 100" preserveAspectRatio="none">
+                            <path fill="#c2185b" d="M0,0 L100,0 L100,80 C75,100 50,90 0,100 Z"></path>
+                        </svg>
+                        <div class="absolute inset-0 flex items-center justify-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-20 w-20 text-white opacity-80" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h.5A2.5 2.5 0 0020 5.5v-1.65" />
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-2xl font-bold text-gray-800 mb-2">Speed Racers</h3>
+                        <p class="text-gray-600 mb-4">A high-octane racing experience with customizable vehicles and tracks.</p>
+                        <div class="flex items-center justify-between">
+                            <span class="bg-pink-100 text-pink-800 text-sm font-medium px-3 py-1 rounded-full">Racing</span>
+                            <button class="text-pink-600 hover:text-pink-800 font-medium">Learn More →</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center mt-12">
+                <button class="bg-purple-600 text-white font-semibold px-8 py-3 rounded-full shadow-md hover:bg-purple-700 transition duration-300">View All Games</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- For Brands Section -->
+    <section id="brands" class="py-20 px-6 bg-gray-50">
+        <div class="container mx-auto">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold text-gray-800 mb-4">For Brands</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">Partner with us to create innovative gaming experiences that elevate your brand.</p>
+            </div>
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
+                <div>
+                    <div class="bg-white p-8 rounded-2xl shadow-lg">
+                        <h3 class="text-2xl font-bold text-gray-800 mb-6">Why Partner With Us?</h3>
+                        <ul class="space-y-4">
+                            <li class="flex items-start">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-purple-600 mr-3 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                                </svg>
+                                <div>
+                                    <h4 class="font-semibold text-gray-800">Industry Expertise</h4>
+                                    <p class="text-gray-600">Our team brings decades of combined experience in gaming development and marketing.</p>
+                                </div>
+                            </li>
+                            <li class="flex items-start">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-purple-600 mr-3 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                                </svg>
+                                <div>
+                                    <h4 class="font-semibold text-gray-800">Global Reach</h4>
+                                    <p class="text-gray-600">Connect with millions of gamers worldwide through our established distribution channels.</p>
+                                </div>
+                            </li>
+                            <li class="flex items-start">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-purple-600 mr-3 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                                </svg>
+                                <div>
+                                    <h4 class="font-semibold text-gray-800">Innovative Solutions</h4>
+                                    <p class="text-gray-600">We create custom gaming experiences that align with your brand values and objectives.</p>
+                                </div>
+                            </li>
+                            <li class="flex items-start">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-purple-600 mr-3 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                                </svg>
+                                <div>
+                                    <h4 class="font-semibold text-gray-800">Data-Driven Approach</h4>
+                                    <p class="text-gray-600">Leverage our analytics to understand player behavior and optimize engagement.</p>
+                                </div>
+                            </li>
+                        </ul>
+                        <button class="mt-8 bg-purple-600 text-white font-semibold px-6 py-3 rounded-lg shadow-md hover:bg-purple-700 transition duration-300">Become a Partner</button>
+                    </div>
+                </div>
+                <div class="grid grid-cols-2 gap-6">
+                    <div class="bg-white p-6 rounded-xl shadow-md flex flex-col items-center text-center">
+                        <div class="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mb-4">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-purple-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 4a2 2 0 114 0v1a1 1 0 001 1h3a1 1 0 011 1v3a1 1 0 01-1 1h-1a2 2 0 100 4h1a1 1 0 011 1v3a1 1 0 01-1 1h-3a1 1 0 01-1-1v-1a2 2 0 10-4 0v1a1 1 0 01-1 1H7a1 1 0 01-1-1v-3a1 1 0 00-1-1H4a2 2 0 110-4h1a1 1 0 001-1V7a1 1 0 011-1h3a1 1 0 001-1V4z" />
+                            </svg>
+                        </div>
+                        <h4 class="text-lg font-bold text-gray-800 mb-2">Game Integration</h4>
+                        <p class="text-gray-600 text-sm">Seamlessly integrate your brand into our existing game portfolio.</p>
+                    </div>
+                    <div class="bg-white p-6 rounded-xl shadow-md flex flex-col items-center text-center">
+                        <div class="w-16 h-16 bg-indigo-100 rounded-full flex items-center justify-center mb-4">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-indigo-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
+                            </svg>
+                        </div>
+                        <h4 class="text-lg font-bold text-gray-800 mb-2">Custom Development</h4>
+                        <p class="text-gray-600 text-sm">Build bespoke games tailored to your specific marketing objectives.</p>
+                    </div>
+                    <div class="bg-white p-6 rounded-xl shadow-md flex flex-col items-center text-center">
+                        <div class="w-16 h-16 bg-pink-100 rounded-full flex items-center justify-center mb-4">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-pink-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 5.882V19.24a1.76 1.76 0 01-3.417.592l-2.147-6.15M18 13a3 3 0 100-6M5.436 13.683A4.001 4.001 0 017 6h1.832c4.1 0 7.625-1.234 9.168-3v14c-1.543-1.766-5.067-3-9.168-3H7a3.988 3.988 0 01-1.564-.317z" />
+                            </svg>
+                        </div>
+                        <h4 class="text-lg font-bold text-gray-800 mb-2">Event Sponsorship</h4>
+                        <p class="text-gray-600 text-sm">Sponsor gaming tournaments and events to increase brand visibility.</p>
+                    </div>
+                    <div class="bg-white p-6 rounded-xl shadow-md flex flex-col items-center text-center">
+                        <div class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mb-4">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-green-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
+                            </svg>
+                        </div>
+                        <h4 class="text-lg font-bold text-gray-800 mb-2">Analytics & Insights</h4>
+                        <p class="text-gray-600 text-sm">Gain valuable data on player engagement and behavior patterns.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="mt-16 bg-purple-900 rounded-2xl p-10 text-center">
+                <h3 class="text-2xl font-bold text-white mb-4">Our Brand Partners</h3>
+                <div class="flex flex-wrap justify-center gap-8 items-center">
+                    <div class="bg-white/20 p-4 rounded-lg w-32 h-20 flex items-center justify-center">
+                        <div class="text-white font-bold text-xl">TechCorp</div>
+                    </div>
+                    <div class="bg-white/20 p-4 rounded-lg w-32 h-20 flex items-center justify-center">
+                        <div class="text-white font-bold text-xl">GameFusion</div>
+                    </div>
+                    <div class="bg-white/20 p-4 rounded-lg w-32 h-20 flex items-center justify-center">
+                        <div class="text-white font-bold text-xl">PixelPlay</div>
+                    </div>
+                    <div class="bg-white/20 p-4 rounded-lg w-32 h-20 flex items-center justify-center">
+                        <div class="text-white font-bold text-xl">NexGen</div>
+                    </div>
+                    <div class="bg-white/20 p-4 rounded-lg w-32 h-20 flex items-center justify-center">
+                        <div class="text-white font-bold text-xl">VirtualX</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Careers Section -->
+    <section id="careers" class="py-20 px-6 bg-white">
+        <div class="container mx-auto">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold text-gray-800 mb-4">Join Our Team</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">We're always looking for talented individuals who are passionate about gaming and innovation.</p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
+                <div class="bg-purple-50 p-8 rounded-2xl">
+                    <h3 class="text-2xl font-bold text-gray-800 mb-6">Why Work With Us?</h3>
+                    <div class="space-y-6">
+                        <div class="flex items-start">
+                            <div class="bg-purple-100 p-3 rounded-full mr-4">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-purple-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
+                                </svg>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-gray-800 mb-1">Innovation-Driven Culture</h4>
+                                <p class="text-gray-600">We encourage creativity and out-of-the-box thinking in everything we do.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="bg-purple-100 p-3 rounded-full mr-4">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-purple-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
+                                </svg>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-gray-800 mb-1">Collaborative Environment</h4>
+                                <p class="text-gray-600">Work alongside industry experts and passionate gaming professionals.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="bg-purple-100 p-3 rounded-full mr-4">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-purple-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" />
+                                </svg>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-gray-800 mb-1">Growth Opportunities</h4>
+                                <p class="text-gray-600">Continuous learning and career advancement paths for all team members.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="bg-purple-100 p-3 rounded-full mr-4">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-purple-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                                </svg>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-gray-800 mb-1">Competitive Benefits</h4>
+                                <p class="text-gray-600">Attractive compensation packages and comprehensive benefits.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <h3 class="text-2xl font-bold text-gray-800 mb-6">Open Positions</h3>
+                    <div class="space-y-4">
+                        <div class="bg-white p-6 rounded-xl shadow-md border border-gray-100">
+                            <div class="flex justify-between items-start">
+                                <div>
+                                    <h4 class="font-bold text-gray-800 text-lg">Senior Game Developer</h4>
+                                    <p class="text-gray-600 mb-2">Full-time • Remote</p>
+                                    <p class="text-sm text-gray-500">Posted 2 days ago</p>
+                                </div>
+                                <span class="bg-purple-100 text-purple-800 text-xs font-medium px-2.5 py-0.5 rounded-full">Engineering</span>
+                            </div>
+                            <button class="mt-4 w-full bg-purple-600 text-white font-medium py-2 rounded-lg hover:bg-purple-700 transition duration-300">Apply Now</button>
+                        </div>
+                        <div class="bg-white p-6 rounded-xl shadow-md border border-gray-100">
+                            <div class="flex justify-between items-start">
+                                <div>
+                                    <h4 class="font-bold text-gray-800 text-lg">3D Artist</h4>
+                                    <p class="text-gray-600 mb-2">Full-time • On-site</p>
+                                    <p class="text-sm text-gray-500">Posted 1 week ago</p>
+                                </div>
+                                <span class="bg-indigo-100 text-indigo-800 text-xs font-medium px-2.5 py-0.5 rounded-full">Creative</span>
+                            </div>
+                            <button class="mt-4 w-full bg-purple-600 text-white font-medium py-2 rounded-lg hover:bg-purple-700 transition duration-300">Apply Now</button>
+                        </div>
+                        <div class="bg-white p-6 rounded-xl shadow-md border border-gray-100">
+                            <div class="flex justify-between items-start">
+                                <div>
+                                    <h4 class="font-bold text-gray-800 text-lg">Game Marketing Specialist</h4>
+                                    <p class="text-gray-600 mb-2">Full-time • Hybrid</p>
+                                    <p class="text-sm text-gray-500">Posted 3 days ago</p>
+                                </div>
+                                <span class="bg-pink-100 text-pink-800 text-xs font-medium px-2.5 py-0.5 rounded-full">Marketing</span>
+                            </div>
+                            <button class="mt-4 w-full bg-purple-600 text-white font-medium py-2 rounded-lg hover:bg-purple-700 transition duration-300">Apply Now</button>
+                        </div>
+                    </div>
+                    <div class="mt-6 text-center">
+                        <button class="text-purple-600 font-semibold hover:text-purple-800 transition duration-300">View All Positions →</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Us Section -->
+    <section id="about" class="py-20 px-6 bg-gray-50">
+        <div class="container mx-auto">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold text-gray-800 mb-4">About CsmGames</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">We're on a mission to redefine gaming experiences through innovation and excellence.</p>
+            </div>
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+                <div>
+                    <div class="relative h-96 rounded-2xl overflow-hidden shadow-xl">
+                        <div class="absolute inset-0 bg-gradient-to-br from-purple-600 to-indigo-800 flex items-center justify-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-32 w-32 text-white opacity-80" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z" />
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                            </svg>
+                        </div>
+                        <div class="absolute bottom-0 left-0 right-0 bg-black/50 p-6 text-white">
+                            <h3 class="text-2xl font-bold mb-2">Our Story</h3>
+                            <p>Founded in 2015 with a vision to transform the gaming landscape</p>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <h3 class="text-2xl font-bold text-gray-800 mb-6">Our Mission</h3>
+                    <p class="text-gray-600 mb-6">At CsmGames, we're dedicated to creating exceptional gaming experiences that push the boundaries of innovation and entertainment. We acquire premium games, collaborate with industry-leading brands, and nurture top development talent to deliver unforgettable experiences to players worldwide.</p>
+                    <div class="space-y-4 mb-8">
+                        <div class="flex items-center">
+                            <div class="w-12 h-12 bg-purple-100 rounded-full flex items-center justify-center mr-4">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-purple-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+                                </svg>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-gray-800">Quality First</h4>
+                                <p class="text-gray-600">We never compromise on the quality of our games and services.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center">
+                            <div class="w-12 h-12 bg-purple-100 rounded-full flex items-center justify-center mr-4">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-purple-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4" />
+                                </svg>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-gray-800">Innovation</h4>
+                                <p class="text-gray-600">We constantly explore new technologies and creative approaches.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center">
+                            <div class="w-12 h-12 bg-purple-100 rounded-full flex items-center justify-center mr-4">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-purple-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z" />
+                                </svg>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-gray-800">Player-Centric</h4>
+                                <p class="text-gray-600">Everything we do is designed with our players in mind.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flex flex-wrap gap-4">
+                        <div class="bg-white px-6 py-3 rounded-full shadow-md">
+                            <span class="font-bold text-purple-600">50+</span>
+                            <span class="text-gray-600 ml-2">Games Published</span>
+                        </div>
+                        <div class="bg-white px-6 py-3 rounded-full shadow-md">
+                            <span class="font-bold text-purple-600">20M+</span>
+                            <span class="text-gray-600 ml-2">Global Players</span>
+                        </div>
+                        <div class="bg-white px-6 py-3 rounded-full shadow-md">
+                            <span class="font-bold text-purple-600">30+</span>
+                            <span class="text-gray-600 ml-2">Brand Partners</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="mt-20">
+                <h3 class="text-2xl font-bold text-gray-800 text-center mb-10">Leadership Team</h3>
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+                    <div class="bg-white rounded-xl shadow-md overflow-hidden">
+                        <div class="h-48 bg-purple-800"></div>
+                        <div class="p-6 text-center">
+                            <h4 class="font-bold text-gray-800 text-xl mb-1">Alex Morgan</h4>
+                            <p class="text-purple-600 mb-4">CEO & Founder</p>
+                            <p class="text-gray-600 text-sm">Gaming industry veteran with 15+ years of experience in game development and publishing.</p>
+                        </div>
+                    </div>
+                    <div class="bg-white rounded-xl shadow-md overflow-hidden">
+                        <div class="h-48 bg-indigo-700"></div>
+                        <div class="p-6 text-center">
+                            <h4 class="font-bold text-gray-800 text-xl mb-1">Sarah Chen</h4>
+                            <p class="text-purple-600 mb-4">Chief Creative Officer</p>
+                            <p class="text-gray-600 text-sm">Award-winning creative director who has led the design of multiple blockbuster titles.</p>
+                        </div>
+                    </div>
+                    <div class="bg-white rounded-xl shadow-md overflow-hidden">
+                        <div class="h-48 bg-pink-700"></div>
+                        <div class="p-6 text-center">
+                            <h4 class="font-bold text-gray-800 text-xl mb-1">Marcus Johnson</h4>
+                            <p class="text-purple-600 mb-4">CTO</p>
+                            <p class="text-gray-600 text-sm">Tech innovator with expertise in game engine development and emerging technologies.</p>
+                        </div>
+                    </div>
+                    <div class="bg-white rounded-xl shadow-md overflow-hidden">
+                        <div class="h-48 bg-purple-600"></div>
+                        <div class="p-6 text-center">
+                            <h4 class="font-bold text-gray-800 text-xl mb-1">Olivia Rodriguez</h4>
+                            <p class="text-purple-600 mb-4">Head of Partnerships</p>
+                            <p class="text-gray-600 text-sm">Strategic partnership expert who has secured collaborations with major global brands.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Us Section -->
+    <section id="contact" class="py-20 px-6 bg-white">
+        <div class="container mx-auto">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold text-gray-800 mb-4">Get In Touch</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">Have questions or want to explore collaboration opportunities? We'd love to hear from you.</p>
+            </div>
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-10">
+                <div class="bg-purple-50 p-8 rounded-2xl">
+                    <h3 class="text-2xl font-bold text-gray-800 mb-6">Contact Information</h3>
+                    <div class="space-y-6">
+                        <div class="flex items-start">
+                            <div class="bg-purple-100 p-3 rounded-full mr-4">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-purple-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                                </svg>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-gray-800 mb-1">Our Location</h4>
+                                <p class="text-gray-600">123 Gaming Avenue, Tech District<br>San Francisco, CA 94107</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="bg-purple-100 p-3 rounded-full mr-4">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-purple-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                                </svg>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-gray-800 mb-1">Email Us</h4>
+                                <p class="text-gray-600">info@csmgames.com<br>partnerships@csmgames.com</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="bg-purple-100 p-3 rounded-full mr-4">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-purple-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                                </svg>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-gray-800 mb-1">Call Us</h4>
+                                <p class="text-gray-600">+1 (555) 123-4567<br>+1 (555) 987-6543</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="bg-purple-100 p-3 rounded-full mr-4">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-purple-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                                </svg>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-gray-800 mb-1">Business Hours</h4>
+                                <p class="text-gray-600">Monday - Friday: 9:00 AM - 6:00 PM<br>Saturday: 10:00 AM - 2:00 PM</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mt-8">
+                        <h4 class="font-semibold text-gray-800 mb-4">Follow Us</h4>
+                        <div class="flex space-x-4">
+                            <a href="#" class="bg-purple-100 p-3 rounded-full hover:bg-purple-200 transition duration-300">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-purple-600" fill="currentColor" viewBox="0 0 24 24">
+                                    <path d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z"/>
+                                </svg>
+                            </a>
+                            <a href="#" class="bg-purple-100 p-3 rounded-full hover:bg-purple-200 transition duration-300">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-purple-600" fill="currentColor" viewBox="0 0 24 24">
+                                    <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+                                </svg>
+                            </a>
+                            <a href="#" class="bg-purple-100 p-3 rounded-full hover:bg-purple-200 transition duration-300">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-purple-600" fill="currentColor" viewBox="0 0 24 24">
+                                    <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+                                </svg>
+                            </a>
+                            <a href="#" class="bg-purple-100 p-3 rounded-full hover:bg-purple-200 transition duration-300">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-purple-600" fill="currentColor" viewBox="0 0 24 24">
+                                    <path d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm-3 17.25c0 .138-.112.25-.25.25h-1.5c-.138 0-.25-.112-.25-.25v-9c0-.138.112-.25.25-.25h1.5c.138 0 .25.112.25.25v9zm-1-10.25c-.69 0-1.25-.56-1.25-1.25s.56-1.25 1.25-1.25 1.25.56 1.25 1.25-.56 1.25-1.25 1.25zm11 10.25c0 .138-.112.25-.25.25h-1.5c-.138 0-.25-.112-.25-.25v-4.28c0-1.72-1.44-1.72-1.5-1.72-.828 0-1.5.672-1.5 1.5v4.5c0 .138-.112.25-.25.25h-1.5c-.138 0-.25-.112-.25-.25v-9c0-.138.112-.25.25-.25h1.5c.138 0 .25.112.25.25v.25c.413-.462 1.224-1 2.5-1 2.25 0 2.5 1.5 2.5 3.5v6z"/>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <form class="bg-white p-8 rounded-2xl shadow-lg">
+                        <h3 class="text-2xl font-bold text-gray-800 mb-6">Send Us a Message</h3>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+                            <div>
+                                <label for="name" class="block text-sm font-medium text-gray-700 mb-2">Your Name</label>
+                                <input type="text" id="name" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent outline-none transition" placeholder="John Doe">
+                            </div>
+                            <div>
+                                <label for="email" class="block text-sm font-medium text-gray-700 mb-2">Your Email</label>
+                                <input type="email" id="email" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent outline-none transition" placeholder="john@example.com">
+                            </div>
+                        </div>
+                        <div class="mb-6">
+                            <label for="subject" class="block text-sm font-medium text-gray-700 mb-2">Subject</label>
+                            <input type="text" id="subject" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent outline-none transition" placeholder="How can we help you?">
+                        </div>
+                        <div class="mb-6">
+                            <label for="message" class="block text-sm font-medium text-gray-700 mb-2">Message</label>
+                            <textarea id="message" rows="5" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent outline-none transition" placeholder="Your message here..."></textarea>
+                        </div>
+                        <div class="mb-6">
+                            <label class="inline-flex items-center">
+                                <input type="checkbox" class="rounded text-purple-600 focus:ring-purple-500">
+                                <span class="ml-2 text-sm text-gray-600">I agree to the privacy policy and terms of service</span>
+                            </label>
+                        </div>
+                        <button type="submit" class="w-full bg-purple-600 text-white font-semibold py-3 rounded-lg shadow-md hover:bg-purple-700 transition duration-300">Send Message</button>
+                        <p class="text-center text-sm text-gray-500 mt-4">This is a demo form. In a real implementation, this would send your message to our team.</p>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12 px-6">
+        <div class="container mx-auto">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
+                <div>
+                    <div class="text-3xl font-bold mb-6">
+                        <span class="text-purple-400">Csm</span>Games
+                    </div>
+                    <p class="text-gray-400 mb-6">Redefining gaming experiences through innovation and excellence.</p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-white transition duration-300">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z"/>
+                            </svg>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white transition duration-300">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+                            </svg>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white transition duration-300">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-6">Quick Links</h4>
+                    <ul class="space-y-3">
+                        <li><a href="#games" class="text-gray-400 hover:text-white transition duration-300">Our Games</a></li>
+                        <li><a href="#brands" class="text-gray-400 hover:text-white transition duration-300">For Brands</a></li>
+                        <li><a href="#careers" class="text-gray-400 hover:text-white transition duration-300">Careers</a></li>
+                        <li><a href="#about" class="text-gray-400 hover:text-white transition duration-300">About Us</a></li>
+                        <li><a href="#contact" class="text-gray-400 hover:text-white transition duration-300">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-6">Resources</h4>
+                    <ul class="space-y-3">
+                        <li><a href="#" class="text-gray-400 hover:text-white transition duration-300">Blog</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition duration-300">Developer Portal</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition duration-300">Press Kit</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition duration-300">Support Center</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition duration-300">Privacy Policy</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-6">Newsletter</h4>
+                    <p class="text-gray-400 mb-4">Subscribe to our newsletter for the latest updates and news.</p>
+                    <form>
+                        <div class="flex">
+                            <input type="email" class="px-4 py-2 w-full rounded-l-lg focus:outline-none" placeholder="Your email">
+                            <button type="submit" class="bg-purple-600 text-white px-4 py-2 rounded-r-lg hover:bg-purple-700 transition duration-300">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                                    <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd" />
+                                </svg>
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 mt-10 pt-6 flex flex-col md:flex-row justify-between items-center">
+                <p class="text-gray-400 text-sm">© 2023 CsmGames. All rights reserved.</p>
+                <div class="flex space-x-6 mt-4 md:mt-0">
+                    <a href="#" class="text-gray-400 hover:text-white text-sm transition duration-300">Terms of Service</a>
+                    <a href="#" class="text-gray-400 hover:text-white text-sm transition duration-300">Privacy Policy</a>
+                    <a href="#" class="text-gray-400 hover:text-white text-sm transition duration-300">Cookie Policy</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+        
+        // Close mobile menu when clicking on a link
+        const mobileLinks = mobileMenu.querySelectorAll('a');
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+        
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                const targetElement = document.querySelector(targetId);
+                
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+        
+        // Active link highlighting based on scroll position
+        const sections = document.querySelectorAll('section');
+        const navLinks = document.querySelectorAll('.nav-link');
+        
+        window.addEventListener('scroll', () => {
+            let current = '';
+            
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                const sectionHeight = section.clientHeight;
+                
+                if (pageYOffset >= sectionTop - 100) {
+                    current = section.getAttribute('id');
+                }
+            });
+            
+            navLinks.forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('href') === `#${current}`) {
+                    link.classList.add('active');
+                }
+            });
+        });
+    </script>
+<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'94cdb179c34bb9fb',t:'MTc0OTQ0MTMyNS4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+</html>
